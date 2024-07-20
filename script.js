@@ -23,31 +23,37 @@ if (window.innerWidth <= 950) {
     menu.style.overflow = 'hidden';
 }
 
+let previousWidth = window.innerWidth;
+
 window.addEventListener('resize', () => {
-    if (window.innerWidth > 950) {
-        ham.style.display = 'none';
-        if (window.innerWidth > 680) {
-            menu.style.width = '25%';
-            ham.style.left = '19%'
-            main.style.width = 'calc(100vw - 25%)'
+
+    if (previousWidth != window.innerWidth) {
+
+        if (window.innerWidth > 950) {
+            ham.style.display = 'none';
+            if (window.innerWidth > 680) {
+                menu.style.width = '25%';
+                ham.style.left = '19%'
+                main.style.width = 'calc(100vw - 25%)'
+            }
+            else {
+                menu.style.width = '60%';
+                ham.style.left = '50%'
+                main.style.width = '99%'
+            }
+
+
+
+            main.style.margin = '10px 10px 10px 0px'
         }
-        else {
-            menu.style.width = '60%';
-            ham.style.left = '50%'
-            main.style.width = '99%'
+
+        if (window.innerWidth <= 950) {
+            ham.style.display = 'block';
+            menu.style.width = '0%';
+            menu.style.overflow = 'hidden';
+            ham.style.left = '0.5%'
+            main.style.width = '98%'
         }
-
-
-
-        main.style.margin = '10px 10px 10px 0px'
-    }
-
-    if (window.innerWidth <= 950) {
-        ham.style.display = 'block';
-        menu.style.width = '0%';
-        menu.style.overflow = 'hidden';
-        ham.style.left = '0.5%'
-        main.style.width = '98%'
     }
 })
 
@@ -138,16 +144,16 @@ async function search_fetch() {
     let art_name = document.getElementsByClassName('art-name');
     let card_desc = document.getElementsByClassName('card-desc');
 
-    for (let i of img){
+    for (let i of img) {
         i.style.backgroundImage = `url(img/loading.webp)`;
     }
-    for (let i of art_name){
+    for (let i of art_name) {
         i.innerText = "...";
     }
-    for(let i of card_desc){
+    for (let i of card_desc) {
         i.innerText = '...';
     }
-    
+
 
     let query = document.getElementById('bar').value;
     let card = document.getElementsByClassName('card');
@@ -189,13 +195,13 @@ async function search_fetch() {
     for (let i = 14; i < 21; i++) {
         card[i].children[0].style.backgroundImage = `url(${result.playlists.items[i - 14].data.images.items[0].sources[0].url})`;
         card[i].children[1].innerText = `${result.playlists.items[i - 14].data.name}`;
-        if(!(result.playlists.items[i - 14].data.description.startsWith('<a'))){
+        if (!(result.playlists.items[i - 14].data.description.startsWith('<a'))) {
             card[i].children[2].innerText = `${result.playlists.items[i - 14].data.description}`;
         }
-        else{
+        else {
             card[i].children[2].innerText = ``;
         }
-        
+
         let id = result.albums.items[i - 14].data.uri.split(":")[2];
         card[i].setAttribute('data-id', `${id}`);
     }
@@ -216,7 +222,7 @@ async function songs_play(e) {
     pause_play.innerHTML = '<i class="fa-solid fa-spinner"></i>';
 
     let playing = document.getElementsByClassName('playing');
-    for (let i of playing){
+    for (let i of playing) {
         i.style.display = 'none';
     }
 
@@ -248,7 +254,7 @@ async function playlists_play(e) {
     pause_play.innerHTML = '<i class="fa-solid fa-spinner"></i>';
 
     let playing = document.getElementsByClassName('playing');
-    for (let i of playing){
+    for (let i of playing) {
         i.style.display = 'none';
     }
 
@@ -289,7 +295,7 @@ async function album_play(e) {
     pause_play.innerHTML = '<i class="fa-solid fa-spinner"></i>';
 
     let playing = document.getElementsByClassName('playing');
-    for (let i of playing){
+    for (let i of playing) {
         i.style.display = 'none';
     }
 
@@ -363,10 +369,10 @@ for (let i = 14; i < 21; i++) {
 audio.addEventListener('ended', () => {
 
     let playing = document.getElementsByClassName('playing');
-    for (let i of playing){
+    for (let i of playing) {
         i.style.display = 'none';
     }
-    
+
     clearInterval(audio.intervalId);
     pause_play.innerHTML = '<i class="fa-solid fa-play"></i>';
 
