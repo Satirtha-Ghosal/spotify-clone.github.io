@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="left.css">
+    <link rel="stylesheet" href="right.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+    </header>
+
+    <main>
+        <i id="collapse" class="fa-solid fa-bars"></i>
+        <div class="left">
+
+            <div class="nav-head">
+
+                <div class="logo">
+                    <i class="fa-brands fa-spotify"></i>
+                    <p>Spotify</p>
+                </div>
+
+                <ul>
+                    <li><i class="fa-solid fa-house"></i><a href="#">Home</a></li>
+                    <li class="hover" id="search-opt"><i class="fa-solid fa-magnifying-glass"></i>Search</li>
+                    <div class="hover" id="search-bar"><input type="text" placeholder="Seach..." id="bar"><i id="search-btn" class="fa-solid fa-magnifying-glass"></i></div>
+                </ul>
+
+            </div>
+
+            <div class="nav-lib">
+                <div class="nav-lib-head">
+                    <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24"
+                        class="Svg-sc-ytk21e-0 bneLcE">
+                        <path
+                            d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z">
+                        </path>
+                    </svg>
+                    <p>Your Library</p>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+
+                <div class="nav-lib-content">
+
+                    <div class="nav-lib-card-container">
+
+                        <div class="nav-lib-card card-playlist">
+
+                            <h5>Create your first playlist</h5>
+                            <p>It's easy, we'll help you</p>
+
+                            <button>Create playlist</button>
+
+                        </div>
+                        <div class="nav-lib-card card-podcasts">
+
+                            <h5>Let's find some podcasts to follow</h5>
+                            <p>We'll keep you updated on new episodes</p>
+
+                            <button>Browse Podcasts</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="nav-foot">
+
+                <div class="nav-foot-link">
+                    <ul>
+                        <li>Legal</li>
+                        <li>Safety & Privacy Center</li>
+                        <li>Privacy Policy</li>
+                        <li>Cookies</li>
+                        <li>About Ads</li>
+                        <li>Accessibility</li>
+                    </ul>
+
+                    <div class="cookies">Cookies</div>
+                </div>
+
+                <div class="nav-foot-lang">
+                    <button class="lang"><i class="fa-solid fa-globe"></i> English</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="right">
+
+            <div class="right-nav-head">
+                <div><i class="fa-solid fa-chevron-left"></i></div>
+                <div><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="sign-up">
+                    <button>Sign up</button>
+                </div>
+                <div class="login">
+                    <button>Log in</button>
+                </div>
+            </div>
+
+            <div class="card-list-container" id="results">
+
+                <h4 id="new-head"></h4>
+
+                <div class="card-list-wrapper" style="background: linear-gradient(to bottom, #242424, #121212)">
+                    
+                    <div class="card-head">
+                        <h4>Popular artists</h4>
+                        <p>Show all</p>
+                    </div>
+                    <div class="card-list">
+                        <div class="card-cir card card1" data-id="1kDZSmw3mKQeAjcmPTLS3M">
+                            <div class="img-wrap" style="background-image: url(img/artist-1.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">Pritam</div>
+                            <div class="card-desc">Artist</div>
+                        </div>
+                        <div class="card-cir card card2" data-id="3xMHXmedL5Rvfxmiar9Ryv">
+                            <div class="img-wrap" style="background-image: url(img/artist-2.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">Arijit Singh</div>
+                            <div class="card-desc">Artist</div>
+                        </div>
+                        <div class="card-cir card card3" data-id="7F8RNvTQlvbeBLeenycvN6">
+                            <div class="img-wrap" style="background-image: url(img/artist-3.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">A.R. Rahman</div>
+                            <div class="card-desc">Arist</div>
+                        </div>
+                        <div class="card-cir card card4" data-id="1hA697u7e1jX2XM8sWA6Uy">
+                            <div class="img-wrap" style="background-image: url(img/artist-4.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">Sachin-Jigar</div>
+                            <div class="card-desc">Arist</div>
+                        </div>
+                        <div class="card-cir card card5" data-id="5DgY6Ab0vpyUMKnY9ubFOF">
+                            <div class="img-wrap" style="background-image: url(img/artist-5.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">Anirudh Ravichander</div>
+                            <div class="card-desc">Arist</div>
+                        </div>
+                        <div class="card-cir card card6" data-id="2fsBaSK1551VvUD9Uvbb9Q">
+                            <div class="img-wrap" style="background-image: url(img/artist-6.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">Darshan</div>
+                            <div class="card-desc">Arist</div>
+                        </div>
+                        <div class="card-cir card card7" data-id="48Ix6ReYdJf2H4mKb3TIpj">
+                            <div class="img-wrap" style="background-image: url(img/artist-7.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">Atif Islam</div>
+                            <div class="card-desc">Arist</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-list-wrapper">
+                    <div class="card-head">
+                        <h4>Popular albums</h4>
+                        <p>Show all</p>
+                    </div>
+                    <div class="card-list">
+                        <div class="card-sq card card1" data-id="1tf2iody5iRLYYPDSBpzRc">
+                            <div class="img-wrap" style="background-image: url(img/album-1.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">Ek Tha Raja</div>
+                            <div class="card-desc">Badshah</div>
+
+                        </div>
+                        <div class="card-sq card card2" data-id="0Rkv5iqjF2uenfL0OVB8hg">
+                            <div class="img-wrap" style="background-image: url(img/album-2.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">Aashiqui 2</div>
+                            <div class="card-desc">Mithoon, Ankit Tiwari, Jeet Gannguli</div>
+                        </div>
+                        <div class="card-sq card card3" data-id="3I3kZyHUtEA9Y59rJkxtk6">
+                            <div class="img-wrap" style="background-image: url(img/album-3.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">Sajni</div>
+                            <div class="card-desc">Ram Sampath</div>
+                        </div>
+                        <div class="card-sq card card4" data-id="3RZxrS2dDZlbsYtMRM89v8">
+                            <div class="img-wrap" style="background-image: url(img/album-4.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">Rockstar</div>
+                            <div class="card-desc">Ranbir Kapoor</div>
+                        </div>
+                        <div class="card-sq card card5" data-id="3BGU0BqGwBkYDHpfCWFm7I">
+                            <div class="img-wrap" style="background-image: url(img/album-5.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">Making Memories</div>
+                            <div class="card-desc">Karan Aujla</div>
+                        </div>
+                        <div class="card-sq card card6" data-id="5AivaZj0CiQJoDWqVH2pbh">
+                            <div class="img-wrap" style="background-image: url(img/album-6.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">Still Rollin</div>
+                            <div class="card-desc">Subh</div>
+                        </div>
+                        <div class="card-sq card card7" data-id="45ZIondgVoMB84MQQaUo9T">
+                            <div class="img-wrap" style="background-image: url(img/album-7.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">Moosetape</div>
+                            <div class="card-desc">Sidhu Moose Wala</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card-list-wrapper">
+                    <div class="card-head">
+                        <h4>Spotify Playlists</h4>
+                        <p>Show all</p>
+                    </div>
+                    <div class="card-list">
+                        <div class="card-sq card card1" data-id="37i9dQZF1DWWMOmoXKqHTD">
+                            <div class="img-wrap" style="background-image: url(img/playlist-1.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">Songs to sing in car</div>
+                            <div class="card-desc">Sing along and enjoy the drive</div>
+                        </div>
+                        <div class="card-sq card card2" data-id="37i9dQZF1DWTvNyxOwkztu">
+                            <div class="img-wrap" style="background-image: url(img/playlist-2.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">Chillout lonuge</div>
+                            <div class="card-desc">just lean back and enjoy relaxed</div>
+                        </div>
+                        <div class="card-sq card card3" data-id="37i9dQZF1DX4dyzvuaRJ0n">
+                            <div class="img-wrap" style="background-image: url(img/playlist-3.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">mint</div>
+                            <div class="card-desc">The world's biggest dance hits</div>
+                        </div>
+                        <div class="card-sq card card4" data-id="37i9dQZF1DX2M1RktxUUHG">
+                            <div class="img-wrap" style="background-image: url(img/playlist-4.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">All out 2020s</div>
+                            <div class="card-desc">The biggest songs of the 2020s</div>
+                        </div>
+                        <div class="card-sq card card5" data-id="37i9dQZF1DWWQRwui0ExPn">
+                            <div class="img-wrap" style="background-image: url(img/playlist-5.jpeg);">
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">lofi beats</div>
+                            <div class="card-desc">chill beats, lofi vibes, new tracks</div>
+                        </div>
+                        <div class="card-sq card card6" data-id="37i9dQZF1DXcBWIGoYBM5M">
+                            <div class="img-wrap" style="background-image: url(img/playlist-6.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">Today's Top Hits</div>
+                            <div class="card-desc">Benson Boone is on top of the Hottest 50</div>
+                        </div>
+                        <div class="card-sq card card7" data-id="37i9dQZF1DWV7EzJMK2FUI">
+                            <div class="img-wrap" style="background-image: url(img/playlist-7.jpeg);">
+                                <div class="playing"><i class="fa-solid fa-chart-simple"></i></div>
+                                <div class="play"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                            <div class="art-name">Jazz in the background</div>
+                            <div class="card-desc">Soft Instrumental Jazz for all your activites</div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="controller">
+
+        <div class="player">
+            <div class="control-up">
+                <div class="controls">
+                    <div id="prev-track"><i class="fa-solid fa-backward-step"></i></div>
+                    <div id="pause-play"><i class="fa-solid fa-play"></i></div>
+                    <div id="next-track"><i class="fa-solid fa-forward-step"></i></div>
+                </div>
+
+                <div class="info">
+                    <div id="duration">--/--</div>
+                </div>
+            </div>
+
+            <div id="length"><i id="tracker" class="fa-solid fa-circle"></i></div>
+            <audio id="audio"
+                src=""></audio>
+        </div>
+        <div class="vol"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

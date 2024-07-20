@@ -1,0 +1,164 @@
+.right {
+    width: calc(100vw - 25%);
+    margin: 10px 10px 10px 0px;
+    height: 84vh;
+}
+
+.right-nav-head {
+    display: flex;
+    align-items: center;
+    background-color: #121212;
+    border: none;
+    border-radius: 10px 10px 0px 0px;
+    padding: 1px 10px;
+    position: sticky;
+}
+
+.right-nav-head i {
+    margin: 0px 20px;
+    font-size: 20px;
+}
+
+.sign-up {
+    margin: 10px;
+    margin-left: auto;
+}
+
+.right-nav-head button {
+    width: 120px;
+    padding: 15px;
+    background-color: transparent;
+    border: none;
+}
+
+.login button {
+    background-color: white;
+    color: black;
+    border-radius: 100px;
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    padding-left: 12px;
+    padding-top: 20px;
+}
+
+.card-head h4 {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.card-list-container {
+    background-color: #121212;
+    cursor: pointer;
+    height: 95%;
+    overflow-y: scroll;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: none;
+}
+
+
+.card-list-container:hover {
+    scrollbar-color: gray transparent;
+    /* scrollbar-width: thin; */
+}
+
+.card-list-wrapper {
+    padding: 0px 10px;
+}
+
+.card-list {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    justify-content: space-between;
+}
+
+.card-cir>.img-wrap {
+    width: 100%;
+    height: 65%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: relative;
+}
+
+.card {
+    padding: 12px;
+    width: 14%;
+    border-radius: 5%;
+}
+
+.playing{
+    position: absolute;
+    bottom: -15px;
+    right: -5px;
+    padding: 0px 10px 20px 0px;
+    display: none;
+}
+
+.playing i{
+    font-size: 40px;
+    color: #03752b;
+    border-radius: 50%;
+    border: none;
+}
+
+
+.play {
+    position: absolute;
+    bottom: -15px;
+    right: -5px;
+    padding: 0px 10px 20px 0px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.2s ease-in-out;
+}
+
+.play i {
+    font-size: 40px;
+    color: #1ed760;
+    border-radius: 50%;
+    border: none;
+    background-color: #242424;
+}
+
+.card:hover .play {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-sq>.img-wrap {
+    width: 100%;
+    height: 65%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5%;
+    position: relative;
+}
+
+.art-name {
+    margin-top: 15px;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-desc {
+    margin-top: 10px;
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgba(202, 199, 199);
+}
+
+.card:hover {
+    background: linear-gradient(to bottom, transparent, #242424)
+}
